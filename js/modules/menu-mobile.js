@@ -1,3 +1,5 @@
+//Menu quando tela fica menor.
+
 import outsideclick from './outsideclick.js';
 
 export default function initMenuMobile() {

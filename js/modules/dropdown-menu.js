@@ -1,3 +1,5 @@
+//O menu/navegação em si.
+
 import outsideClick from "./outsideclick.js"
 
 export default function initDropdownMenu() {
