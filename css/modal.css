@@ -1,0 +1,83 @@
+.modal-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal-container.ativo {
+    display: flex;
+}
+
+.modal {
+    width: 80vw;
+    padding: 40px;
+    max-width: 600px;
+    position: relative;
+    background: white;
+    box-sizing: border-box;
+    border: 10px solid #FB5;
+    box-shadow: 0 0 0 10px white;
+}
+
+.ativo .modal {
+    animation: modal .3s forwards
+}
+
+.fechar {
+    top: -30px;
+    width: 50px;
+    right: -30px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0.3);
+    background: #E54 url('/img/fechar.svg') no-repeat center center;
+}
+
+.modal label {
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0 .5rem 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.modal input {
+    width: 100%;
+    border-radius: 0px;
+    padding: .7rem .5rem;
+    box-sizing: border-box;
+    border: 2px solid #222;
+}
+
+.modal button[type="submit"] {
+    border: none;
+    display: block;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: .7rem 2rem;
+    background-color: #E54;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
